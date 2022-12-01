@@ -1,0 +1,24 @@
+<div class="wielki">
+  <table>
+    <tr>
+      <td style="background-color: yellow;">Imię:</td>
+      <td style="background-color: yellow;">Nazwisko:</td>
+    </tr>
+      {{#each rak}}
+      <tr>
+        <td>{{imie}}</td>
+        <td>{{nazwisko}}</td>
+      {{/each}}
+  </table>
+
+  <table>
+    <tr>
+      <td style="background-color: yellow;">Ocena:</td>
+    </tr>
+      {{#each lista}}
+      <tr>
+        <td>{{ocena}}</td>
+      </tr>
+      {{/each}}
+  </table>
+</div>

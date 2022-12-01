@@ -1,0 +1,74 @@
+<div class="wielki">
+  <button id="logout" type="button" name="logout">Wyloguj</button>
+
+<h1>Dodawanie uczniów i ocen:</h1>
+  <form class="dodawanie" action="/redirect" method="post">
+    <input type="submit"  value="dodaj ucznia">
+  </form>
+
+  <form class="dodawanieoceny" action="/redirect2" method="post">
+    <input type="submit"  value="dodaj ocene">
+  </form>
+
+  <h1>Edycja danych ucznia:</h1>
+
+  <form class="dodawanie" action="/edit" method="post">
+    <input type="text" name="imie_ucznia" value="">
+    <input type="text" name="nazwisko_ucznia" value="">
+    <input type="submit"  value="Edytuj dane ucznia">
+  </form>
+
+
+
+  <h1>Wyszukiwanie uczniow:</h1>
+
+  <form class="wyszukiwanie" action="/wyszukaj" method="post">
+    <input type="text" name="imie_ucznia" value="">
+    <input type="text" name="nazwisko_ucznia" value="">
+    <input type="submit"  value="wyszukaj ucznia">
+  </form>
+
+  <h1>Usuń ucznia:</h1>
+
+  <form class="usuwanie" action="/usun" method="post">
+    <input type="text" name="imie_ucznia" value="">
+    <input type="text" name="nazwisko_ucznia" value="">
+    <input type="submit"  value="Usuń ucznia">
+  </form>
+
+  <h1>Usuń ocenę:</h1>
+
+  <form class="usuwanie" action="/usunoc" method="post">
+    <input type="text" name="ocena" value="">
+    <input type="submit"  value="Usuń ocenę">
+  </form>
+
+
+  <table>
+    <tr>
+      <td class="imnazw" style="background-color: yellow;">Imię:</td>
+      <td class="imnazw" style="background-color: yellow;">Nazwisko:</td>
+    </tr>
+      {{#each rak}}
+      <tr>
+        <td>{{imie}}</td>
+        <td>{{nazwisko}}</td>
+        <td><a href="/item/{{_id}}">Do elementu</a></td>
+      {{/each}}
+
+
+
+  </table>
+
+  <table>
+    <tr>
+      <td style="background-color: yellow;">Ocena:</td>
+    </tr>
+      {{#each lista}}
+      <tr>
+        <td>{{ocena}}</td>
+      </tr>
+      {{/each}}
+  </table>
+
+</div>

@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <td style="background-color: yellow;">Imię:</td>
+    <td style="background-color: yellow;">Nazwisko:</td>
+  </tr>
+    {{#each rak}}
+    <tr>
+      <td>{{imie}}</td>
+      <td>{{nazwisko}}</td>
+      <td><a href="/item/{{_id}}">Do elementu</a></td>
+    </tr>
+    {{/each}}
+</table>
